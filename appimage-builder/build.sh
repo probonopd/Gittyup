@@ -4,6 +4,8 @@ git submodule init
 git submodule update
 
 # Install Qt
+echo "deb http://ppa.launchpad.net/beineri/opt-qt-5.15.2-xenial/ubuntu xenial main" | sudo tee -a /etc/apt/sources.list/qt.list
+
 sudo add-apt-repository ppa:beineri/opt-qt-5.15.2-xenial -y
 sudo apt-get update -qq
 sudo apt-get -y install qt515base qt515tools libgl1-mesa-dev ca-certificates wget
