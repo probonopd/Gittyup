@@ -10,10 +10,9 @@ sudo apt-get -y install qt515base qt515tools libgl1-mesa-dev ca-certificates wge
 set +e ; source /opt/qt*/bin/qt*-env.sh ; set -e
 
 # Install a newer version of CMake than what comes with Ubuntu
-wget -c https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4-linux-x86_64.tar.gz
-tar xfvz /home/user/Downloads/cmake-*-linux-x86_64.tar.gz
+wget -c -q https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4-linux-x86_64.tar.gz
+tar xfvz /home/user/Downloads/cmake-*
 export PATH=$(readlink -f cmake-*-linux-x86_64/bin/):$PATH
-
 
 # Install ninja
 sudo pip3 install ninja
