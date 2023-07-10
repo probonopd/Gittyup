@@ -35,8 +35,8 @@ chmod +x appimagetool-*.AppImage
 LD_LIBRARY_PATH=/opt/qt515/lib/ ./appimagetool-*.AppImage -s deploy ./appdir/usr/share/applications/*.desktop --appimage-extract-and-run # Bundle EVERYTHING
 
 # Modify the AppDir: move ld-linux into the same directory as the payload application
-# and change AppRun accordingly
-mv ./appdirlib64/ld-linux-x86-64.so.2 ./appdir/usr/bin/
+# and change AppRun accordingly; so that, e.g., Qt qApp->applicationDirPath() works
+mv ./appdir/lib64/ld-linux-x86-64.so.2 ./appdir/usr/bin/
 sed -i -e 's@^LD_LINUX.*@LD_LINUX=$(find "$HERE/usr/bin" -name "ld-*.so.*" | head -n 1)@g' ./appdir/AppRun
 
 # Turn AppDir into AppImage
