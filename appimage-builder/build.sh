@@ -6,11 +6,11 @@ git submodule update
 # Install Qt
 sudo add-apt-repository ppa:beineri/opt-qt-5.15.2-xenial -y
 sudo apt-get update -qq
-sudo apt-get -y install qt515base qt515tools libgl1-mesa-dev ca-certificates wget python3-pip
+sudo apt-get -y install qt515base qt515tools libgl1-mesa-dev ca-certificates wget
 set +e ; source /opt/qt*/bin/qt*-env.sh ; set -e
 
 # Install ninja
-sudo pip install ninja
+sudo pip3 install ninja
 
 # Build OpenSSL; why does it need a private (self-built) version?
 cd dep/openssl/openssl
