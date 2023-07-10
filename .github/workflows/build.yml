@@ -25,7 +25,7 @@ jobs:
       - name: Install prerequisites
         run: |
           apt-get -y update
-          apt-get -y install git sudo add-apt-repository build-essential
+          apt-get -y install git sudo sudo apt install software-properties-common build-essential
       - name: Build AppImage
         run: |
           git clone https://github.com/probonopd/Gittyup/ # FIXME: Use variables
