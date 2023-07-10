@@ -4,7 +4,7 @@ git submodule init
 git submodule update
 
 # Install Qt
-echo "deb http://ppa.launchpad.net/beineri/opt-qt-5.15.2-xenial/ubuntu xenial main" | sudo tee -a /etc/apt/sources.list/qt.list
+echo "deb http://ppa.launchpad.net/beineri/opt-qt-5.15.2-xenial/ubuntu xenial main" | sudo tee -a /etc/apt/sources.list.d/qt.list
 
 sudo add-apt-repository ppa:beineri/opt-qt-5.15.2-xenial -y
 sudo apt-get update -qq
