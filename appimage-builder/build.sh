@@ -14,6 +14,8 @@ wget -c -q https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26
 tar xfvz cmake-*.tar.gz
 export PATH=$(readlink -f cmake-*-linux-x86_64/bin/):$PATH
 
+export CXXFLAGS="-std=c++17"
+
 # Install ninja
 sudo pip3 install ninja
 
